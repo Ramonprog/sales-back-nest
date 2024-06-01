@@ -17,6 +17,7 @@ export class UserService {
 
     const user = {
       ...createUser,
+      typeUser: 1,
       password: hashedPassword,
     }
 
