@@ -31,7 +31,7 @@ export class UserController {
   }
 
   @Get('/:userId')
-  async findUserById(@Param('userId') userId: number) {
-    return this.userService.findtUserById(userId)
+  async findUserById(@Param('userId') userId: number): Promise<ReturnUserDto> {
+    return new ReturnUserDto(await this.userService.findtUserById(userId))
   }
 }
